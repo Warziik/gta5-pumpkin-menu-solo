@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "NativeUI/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "ScriptHookVDotNet2": "2.10.7"
+        },
+        "compile": {
+          "lib/net452/NativeUI.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NativeUI.dll": {}
+        }
+      },
+      "ScriptHookVDotNet2/2.10.12": {
+        "type": "package",
+        "compile": {
+          "lib/net48/ScriptHookVDotNet2.dll": {}
+        },
+        "runtime": {
+          "lib/net48/ScriptHookVDotNet2.dll": {}
+        }
+      },
+      "System.Windows.Forms/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/System.Windows.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/System.Windows.Forms.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NativeUI/1.9.0": {
+      "sha512": "9HUvaDZxp14UOo5ewYVVO3gHzK/OZcE6k5jBZZV8rSjr8RBxaQZ83SkKQlH8JInkQnUyHOkb2cm9SC+6SGjQHg==",
+      "type": "package",
+      "path": "nativeui/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/NativeUI.dll",
+        "nativeui.1.9.0.nupkg.sha512",
+        "nativeui.nuspec"
+      ]
+    },
+    "ScriptHookVDotNet2/2.10.12": {
+      "sha512": "tMRJXU1hh4fpGaLH0BO6DTqXVjOOoOPFylwmSt06ntl9/ZXHpg5CMVsiJmMFp/T+BL2YW14G7Z1pGqbb8TvtOA==",
+      "type": "package",
+      "path": "scripthookvdotnet2/2.10.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net48/ScriptHookVDotNet2.dll",
+        "lib/net48/ScriptHookVDotNet2.xml",
+        "scripthookvdotnet2.2.10.12.nupkg.sha512",
+        "scripthookvdotnet2.nuspec"
+      ]
+    },
+    "System.Windows.Forms/4.0.0": {
+      "sha512": "WL3QPG1q88aIWO0JPOlkCeyNE+FK4ufSKY5j6J6qAFQyfCFiiOYxi8RAhev9H0CS/wmKbIK8qr8xZBod85oWKw==",
+      "type": "package",
+      "path": "system.windows.forms/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/System.Windows.Forms.dll",
+        "system.windows.forms.4.0.0.nupkg.sha512",
+        "system.windows.forms.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "NativeUI >= *",
+      "ScriptHookVDotNet2 >= *",
+      "System.Windows.Forms >= 4.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Shadow\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Shadow\\Documents\\GTADEV\\ModMenu\\pumpkin-menu\\pumpkin-menu.csproj",
+      "projectName": "pumpkin-menu",
+      "projectPath": "C:\\Users\\Shadow\\Documents\\GTADEV\\ModMenu\\pumpkin-menu\\pumpkin-menu.csproj",
+      "packagesPath": "C:\\Users\\Shadow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shadow\\Documents\\GTADEV\\ModMenu\\pumpkin-menu\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Shadow\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "NativeUI": {
+            "target": "Package",
+            "version": "[*, )"
+          },
+          "ScriptHookVDotNet2": {
+            "target": "Package",
+            "version": "[*, )"
+          },
+          "System.Windows.Forms": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

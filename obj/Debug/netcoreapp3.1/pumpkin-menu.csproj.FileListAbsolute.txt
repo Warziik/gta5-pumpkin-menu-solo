@@ -1,0 +1,9 @@
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\bin\Debug\netcoreapp3.1\pumpkin-menu.deps.json
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\bin\Debug\netcoreapp3.1\pumpkin-menu.dll
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\bin\Debug\netcoreapp3.1\pumpkin-menu.pdb
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.csprojAssemblyReference.cache
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.csproj.CoreCompileInputs.cache
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.AssemblyInfoInputs.cache
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.AssemblyInfo.cs
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.dll
+C:\Users\Shadow\Documents\GTADEV\ModMenu\pumpkin-menu\obj\Debug\netcoreapp3.1\pumpkin-menu.pdb

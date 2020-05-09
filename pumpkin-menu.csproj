@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>pumpkin_menu</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Forms" Version="4.0.0.0"/>
+    <PackageReference Include="ScriptHookVDotNet2" Version="*"/>
+    <PackageReference Include="NativeUI" Version="*"/>
+  </ItemGroup>
+</Project>
