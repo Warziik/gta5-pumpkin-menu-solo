@@ -41,17 +41,15 @@ namespace pumpkin_menu
         #region Menu
         private void Setup()
         {
-            pumpkinMenu = new UIMenu("PumpkinMenu", "A basic mod menu.");
+            pumpkinMenu = new UIMenu("PumpkinMenu", "A basic menu.");
             menuPool.Add(pumpkinMenu);
 
             //UIResRectangle banner = new UIResRectangle();
             //banner.Color = Color.FromArgb(224, 123, 57, 255);
-            Sprite banner = new Sprite("shopui_title_barber", "shopui_title_barber", new Point(0, 0), new Size(0, 0));
-            pumpkinMenu.SetBannerType(banner);
+            //Sprite banner = new Sprite("shopui_title_barber", "shopui_title_barber", new Point(0, 0), new Size(0, 0));
+            //pumpkinMenu.SetBannerType(banner);
 
             AddPlayerMenu(pumpkinMenu);
-            AddWeaponsMenu(pumpkinMenu);
-            AddVehiclesMenu(pumpkinMenu);
             AddTimeMenu(pumpkinMenu);
             AddWeatherMenu(pumpkinMenu);
             AddWorldMenu(pumpkinMenu);
@@ -64,14 +62,6 @@ namespace pumpkin_menu
             UIMenu playerMenu = menuPool.AddSubMenu(mainMenu, "Player", "Change your character");
             playerMenu.AddItem(new UIMenuCheckboxItem("Godmode", false));
             AddWantedLevelSubmenu();
-
-            /*
-            OutputArgument hashResult = new OutputArgument();
-            Function.Call(Hash.IS_PLAYER_ONLINE, hashResult);
-            bool isPlyaerOnline = hashResult.GetResult<bool>();
-            if (isPlyaerOnline)
-            */
-            AddOnlineMenu();
 
             playerMenu.OnCheckboxChange += (sender, item, index) =>
             {
@@ -97,132 +87,13 @@ namespace pumpkin_menu
                             Function.Call(Hash.CLEAR_PLAYER_WANTED_LEVEL, Game.Player);
                             break;
                         case 1:
+                            if (Game.Player.WantedLevel < 5)
+                                Game.Player.WantedLevel++;
                             break;
                         case 2:
+                            if (Game.Player.WantedLevel > 0)
+                                Game.Player.WantedLevel--;
                             break;
-                        default:
-                            break;
-                    };
-                };
-            }
-            void AddOnlineMenu()
-            {
-                UIMenu onlineSubmenu = menuPool.AddSubMenu(playerMenu, "Online");
-                onlineSubmenu.AddItem(new UIMenuCheckboxItem("Anti AFK", false));
-                onlineSubmenu.AddItem(new UIMenuItem("Change RP level"));
-                onlineSubmenu.OnCheckboxChange += (sender, item, index) =>
-                {
-                    if (item.Text == "Anti AFK")
-                    {
-                        UI.Notify("~o~PumpkinMenu~w~: ~r~Not available yet :(");
-                        //checkboxNotify(item.Text, index);
-                    }
-                };
-                onlineSubmenu.OnItemSelect += (sender, item, index) =>
-                {
-                    switch (index)
-                    {
-                        case 1:
-                            string rpLevel = Game.GetUserInput(WindowTitle.FMMC_KEY_TIP10, 3);
-                            if (!string.IsNullOrWhiteSpace(rpLevel))
-                            {
-                                UI.Notify("~o~PumpkinMenu~w~: Your rp level has been changed to ~b~" + rpLevel);
-                            }
-                            break;
-                        default:
-                            break;
-                    };
-                };
-            }
-            #endregion
-        }
-
-        private void AddWeaponsMenu(UIMenu mainMenu)
-        {
-            UIMenu weaponsMenu = menuPool.AddSubMenu(mainMenu, "Weapons", "Give weapons");
-            weaponsMenu.AddItem(new UIMenuItem("Give all weapons"));
-            weaponsMenu.AddItem(new UIMenuCheckboxItem("Unlimited ammo", false));
-
-            weaponsMenu.OnCheckboxChange += (sender, item, index) =>
-            {
-                if (item.Text == "Unlimited ammo")
-                {
-                    //Function.Call("", Game.Player, index);
-                    UI.Notify("~o~PumpkinMenu~w~: ~r~Not available yet :(");
-                    //UI.Notify("~o~PumpkinMenu~w~: " + item.Text + " " + (index ? "~g~enabled" : "~r~disabled"));
-                }
-            };
-
-            weaponsMenu.OnItemSelect += (sender, item, index) =>
-            {
-                switch (index)
-                {
-                    case 1:
-                        UI.Notify("~o~PumpkinMenu~w~: ~r~Not available yet :(");
-                        break;
-                    default:
-                        break;
-                };
-            };
-        }
-
-        private void AddVehiclesMenu(UIMenu mainMenu)
-        {
-            UIMenu vehiclesMenu = menuPool.AddSubMenu(mainMenu, "Vehicles");
-            AddOptionsSubmenu();
-            AddEmergencySubmenu();
-            AddMilitarySubmenu();
-            AddSportSubmenu();
-
-            #region Submenues
-            void AddOptionsSubmenu()
-            {
-                UIMenu optionsSubmenu = menuPool.AddSubMenu(vehiclesMenu, "Vehicle Options");
-                optionsSubmenu.AddItem(new UIMenuCheckboxItem("Car godmode", false));
-
-                optionsSubmenu.OnCheckboxChange += (sender, item, index) =>
-                {
-                    if (item.Text == "Car godmode")
-                    {
-                        //Function.Call();
-                        //UI.Notify("~o~PumpkinMenu~w~: " + item.Text + " " + (index ? "~g~enabled" : "~r~disabled"));
-                        UI.Notify("~o~PumpkinMenu~w~: ~r~Not available yet :(");
-                    }
-                };
-            }
-            void AddEmergencySubmenu()
-            {
-                UIMenu emergencySubmenu = menuPool.AddSubMenu(vehiclesMenu, "Emergency");
-
-                emergencySubmenu.OnItemSelect += (sender, item, index) =>
-                {
-                    switch (index)
-                    {
-                        default:
-                            break;
-                    };
-                };
-            }
-            void AddMilitarySubmenu()
-            {
-                UIMenu militarySubmenu = menuPool.AddSubMenu(vehiclesMenu, "Military");
-                militarySubmenu.OnItemSelect += (sender, item, index) =>
-                {
-                    switch (index)
-                    {
-                        default:
-                            break;
-                    }
-                };
-            }
-            void AddSportSubmenu()
-            {
-                UIMenu sportSubmenu = menuPool.AddSubMenu(vehiclesMenu, "Sport");
-
-                sportSubmenu.OnItemSelect += (sender, item, index) =>
-                {
-                    switch (index)
-                    {
                         default:
                             break;
                     };

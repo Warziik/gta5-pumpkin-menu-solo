@@ -3,10 +3,11 @@
     <OutputType>library</OutputType>
     <TargetFramework>net48</TargetFramework>
     <RootNamespace>pumpkin_menu</RootNamespace>
+    <AssemblyName>PumpkinMenu</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Windows.Forms" Version="4.0.0.0"/>
-    <PackageReference Include="ScriptHookVDotNet2" Version="*"/>
-    <PackageReference Include="NativeUI" Version="*"/>
+    <PackageReference Include="ScriptHookVDotNet2" Version="2.10.12" />
+    <PackageReference Include="System.Windows.Forms" Version="4.0.0.0" />
+    <PackageReference Include="NativeUI" Version="1.9.0" />
   </ItemGroup>
 </Project>
